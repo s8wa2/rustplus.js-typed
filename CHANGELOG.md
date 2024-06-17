@@ -1,5 +1,11 @@
 # @grolm/rustplus.js-typed
 
+## 3.0.2
+
+### Patch Changes
+
+- ed8bdc7: Fix urls in package.json
+
 ## 3.0.1
 
 ### Patch Changes
