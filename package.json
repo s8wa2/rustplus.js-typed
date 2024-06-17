@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/liamcottle/rustplus.js.git"
+    "url": "git+https://github.com/s8wa2/rustplus.js-typed.git"
   },
   "keywords": [
     "rust",
@@ -35,9 +35,9 @@
   "author": "Liam Cottle",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/liamcottle/rustplus.js/issues"
+    "url": "https://github.com/s8wa2/rustplus.js-typed/issues"
   },
-  "homepage": "https://github.com/liamcottle/rustplus.js#readme",
+  "homepage": "https://github.com/s8wa2/rustplus.js-typed#readme",
   "dependencies": {
     "@protobuf-ts/plugin": "^2.9.3",
     "axios": "^1.2.2",
