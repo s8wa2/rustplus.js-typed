@@ -3,13 +3,16 @@
 </p>
 
 <p align="center">
-<a href="https://www.npmjs.com/package/@liamcottle/rustplus.js"><img src="https://img.shields.io/npm/dt/@liamcottle/rustplus.js" alt="npm"/></a>
+<a href="https://www.npmjs.com/package/@grolm/rustplus.js-typed"><img src="https://img.shields.io/npm/dt/@grolm/rustplus.js-typed" alt="npm"/></a>
 <a href="https://discord.gg/APQSQZNV7t"><img src="https://img.shields.io/badge/Discord-Liam%20Cottle's%20Discord-%237289DA?style=flat&logo=discord" alt="discord"/></a>
 <a href="https://twitter.com/liamcottle"><img src="https://img.shields.io/badge/Twitter-@liamcottle-%231DA1F2?style=flat&logo=twitter" alt="twitter"/></a>
 <br/>
 <a href="https://ko-fi.com/liamcottle"><img src="https://img.shields.io/badge/Donate%20a%20Coffee-liamcottle-yellow?style=flat&logo=buy-me-a-coffee" alt="donate on ko-fi"/></a>
 <a href="./donate.md"><img src="https://img.shields.io/badge/Donate%20Bitcoin-3FPBfiEwioWHFix3kZqe5bdU9F5o8mG8dh-%23FF9900?style=flat&logo=bitcoin" alt="donate bitcoin"/></a>
 </p>
+
+Fork of <a href="https://www.npmjs.com/package/@liamcottle/rustplus.js">@liamcottle/rustplus.js</a> w/ typescript support
+<br/>
 
 This is an **unofficial** NodeJS library for interacting with Smart Switches, Smart Alarms and various other things in the PC game [Rust](https://store.steampowered.com/app/252490/Rust/).
 
@@ -24,7 +27,7 @@ Also, feel free to check out my new rust project [Atlas](https://github.com/liam
 To use this library in your own NodeJS app, you can install it via `npm`.
 
 ```
-npm install @liamcottle/rustplus.js
+npm install @grolm/rustplus.js-typed
 ```
 
 ## Features
@@ -76,7 +79,7 @@ You will need to provide the following details to be able to connect:
 - Player Token ([Token from Server Pairing](#pairing))
 
 ```js
-const RustPlus = require("@liamcottle/rustplus.js");
+const {RustPlus} = require("@grolm/rustplus.js-typed");
 var rustplus = new RustPlus("ip", "port", "playerId", "playerToken");
 
 // wait until connected before sending commands
@@ -239,7 +242,7 @@ I have put together a command line tool which will do everything required to rec
 Before you can listen for Pairing Notifications, you need to register with FCM, Expo and link your Steam Account with Rust+. Conveniently, you can do this by running the following command.
 
 ```
-npx @liamcottle/rustplus.js fcm-register
+npx @grolm/rustplus.js-typed fcm-register
 ```
 
 A custom Google Chrome browser will be launched. This will take you to the Rust Companion website to log in with your Steam account.
@@ -249,7 +252,7 @@ A custom Google Chrome browser will be launched. This will take you to the Rust 
 After successfully registering, you can listen for Pairing Notifications
 
 ```
-npx @liamcottle/rustplus.js fcm-listen
+npx @grolm/rustplus.js-typed fcm-listen
 ```
 
 Example Output
@@ -272,13 +275,13 @@ Example Output
 The command line tool allows you to set a custom config file for saving and loading your credentials. This is helpful if you want to register on your local pc, and copy the config to another server.
 
 ```
-npx @liamcottle/rustplus.js --config-file=/path/to/config.json <command>
+npx @grolm/rustplus.js-typed --config-file=/path/to/config.json <command>
 ```
 
 If you want to run the latest changes to the CLI tool, you can run it like so:
 
 ```
-git clone https://github.com/liamcottle/rustplus.js
+git clone https://github.com/s8wa2/rustplus.js-typed
 cd rustplus.js
 npm install
 node cli/index.js <command>
