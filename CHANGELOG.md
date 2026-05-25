@@ -1,5 +1,11 @@
 # @grolm/rustplus.js-typed
 
+## 3.1.1
+
+### Patch Changes
+
+- 35b02a0: Getting rid of an unecessary string to string conversion
+
 ## 3.1.0
 
 ### Minor Changes
