@@ -1,5 +1,11 @@
 # @grolm/rustplus.js-typed
 
+## 3.1.0
+
+### Minor Changes
+
+- 9a2bed1: Better enum imports by setting sideEffects: false in package.json, moving jimp import
+
 ## 3.0.3
 
 ### Patch Changes
