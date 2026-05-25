@@ -1,10 +1,9 @@
 "use strict";
 
 import { EventEmitter } from "events";
-import Jimp from "jimp";
 
-import { AppCameraInfo, AppCameraRays, AppMessage } from "./proto";
-import { RustPlus } from "./rustplus";
+import type { AppCameraInfo, AppCameraRays, AppMessage } from "./proto";
+import type { RustPlus } from "./rustplus";
 
 export enum CameraButtons {
   NONE = 0,
@@ -136,7 +135,7 @@ class Camera extends EventEmitter {
       const frame = await this._renderCameraFrame(
         this.cameraRays,
         this.cameraSubscribeInfo.width,
-        this.cameraSubscribeInfo.height,
+        this.cameraSubscribeInfo.height
       );
 
       // fire callback
@@ -162,8 +161,10 @@ class Camera extends EventEmitter {
   async _renderCameraFrame(
     frames: AppCameraRays[],
     width: number,
-    height: number,
+    height: number
   ) {
+    const Jimp = require("jimp");
+
     // First we populate the samplePositionBuffer with the positions of each sample
     const samplePositionBuffer = new Int16Array(width * height * 2);
     for (let w = 0, _ = 0; _ < height; _++)
@@ -320,10 +321,10 @@ class Camera extends EventEmitter {
           target_colour[0],
           target_colour[1],
           target_colour[2],
-          255,
+          255
         ),
         x,
-        y,
+        y
       );
     }
 
