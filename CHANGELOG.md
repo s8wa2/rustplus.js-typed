@@ -1,5 +1,11 @@
 # @grolm/rustplus.js-typed
 
+## 3.0.3
+
+### Patch Changes
+
+- 6d539cf: Update readme
+
 ## 3.0.2
 
 ### Patch Changes
